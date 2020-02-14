@@ -91,7 +91,7 @@ export default () => {
   return (
     <>
       <Header>
-        <Title>Quick Notes</Title>
+        <Title>Soul Beast</Title>
         <SignOutButton
           onClick={() => {
             Auth.signOut().then(() => window.location.reload());
@@ -102,8 +102,7 @@ export default () => {
       </Header>
       <StyledTabs index={tabIndex} onChange={index => setTabIndex(index)}>
         <StyledTabList>
-          <StyledTab>Notes</StyledTab>
-          <StyledTab>Record</StyledTab>
+          <StyledTab>Enter Below Details</StyledTab>
         </StyledTabList>
         <StyledTabPanels>
           <StyledTabPanel>
