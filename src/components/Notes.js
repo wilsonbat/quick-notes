@@ -1,4 +1,4 @@
-import React, { useState, useEffeict ,Component} from "react";
+import React, { useState, useEffeict ,Component, View, StyleSheet} from "react";
 import { API, graphqlOperation } from "aws-amplify";
 import styled from "@emotion/styled";
 
@@ -8,7 +8,7 @@ import { updateNote, deleteNote } from "../graphql/mutations";
 
 
 
-import { View, StyleSheet } from 'react-native';
+
 
 import t from 'tcomb-form-native'; // 0.6.9
 
