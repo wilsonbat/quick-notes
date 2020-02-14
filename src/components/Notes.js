@@ -1,5 +1,5 @@
-import React, { useState, useEffeict ,Component} from "react";
-import { Text, TextInput, View } from 'react-native';
+import React, { useState, useEffeict ,Component,Text, TextInput, View } from "react";
+
 import { API, graphqlOperation } from "aws-amplify";
 import styled from "@emotion/styled";
 
