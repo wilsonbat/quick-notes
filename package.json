@@ -19,8 +19,7 @@
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
     "react-scripts": "3.1.1",
-    "tcomb-form-native": "0.6.20",
-    "react-native": "0.61.5"
+    "tcomb-form-native": "0.6.20"
   },
   "scripts": {
     "start": "react-scripts start",
