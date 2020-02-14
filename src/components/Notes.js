@@ -1,4 +1,4 @@
-import React, { useState,Component,Text, TextInput, View } from "react";
+import React, { useState,useEffect,Component,Text, TextInput, View } from "react";
 
 import { API, graphqlOperation } from "aws-amplify";
 import styled from "@emotion/styled";
