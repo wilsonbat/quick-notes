@@ -89,34 +89,17 @@ export default props => {
   };
 
   return (
-    <Note>
-      <Info>
-        <Title>{props.title}</Title>
-        <Text>{props.text}</Text>
-      </Info>
-      <Divider />
-      <NoteActions>
-        <Icon onClick={() => playAudio()}>
-          <FaPlay />
-        </Icon>
-        <Icon onClick={() => setShowEditor(true)}>
-          <FaRegEdit />
-        </Icon>
-        <Icon>
-          <FaRegTrashAlt onClick={props.onDelete} />
-        </Icon>
-      </NoteActions>
+    <div className="form-group">
+    <label for={props.name} className="form-label">{props.title}</label>
+    <input
+      className="form-control"
+      firstName={props.name}
+      lastName={props.fname}
+      birthDate={props.lname}
+      favicecream={props.value}
+      onChange={props.handleChange}
 
-      {showEditor && (
-        <RecordingEditor
-          title={props.title}
-          text={props.text}
-          onDismiss={() => {
-            setShowEditor(false);
-          }}
-          onSave={props.onSaveChanges}
-        />
-      )}
-    </Note>
+      {...props} />
+  </div>
   );
 };
