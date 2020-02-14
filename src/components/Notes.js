@@ -6,11 +6,35 @@ import Note from "./Note";
 import { listNotes } from "../graphql/queries";
 import { updateNote, deleteNote } from "../graphql/mutations";
 
+
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+
+import t from 'tcomb-form-native'; // 0.6.9
+
+const Form = t.form.Form;
+
+const User = t.struct({
+  FirstName: t.String,
+  LastName: t.String,
+  BirthDate: t.Date,
+  FavoriteIceCream: t.String
+});
+
 const Container = styled("div")`
   max-width: 800px;
   margin: 16px auto;
   width: 100%;
 `;
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    marginTop: 50,
+    padding: 20,
+    backgroundColor: '#ffffff',
+  },
+});
 
 export default () => {
   const [notes, setNotes] = useState([]);
@@ -32,39 +56,9 @@ export default () => {
 
   return (
     <Container>
-      {notes.map(note => (
-        <Note
-          key={note.id}
-          {...note}
-          onSaveChanges={async values => {
-            const result = await API.graphql(
-              graphqlOperation(updateNote, {
-                input: {
-                  ...note,
-                  ...values
-                }
-              })
-            );
-
-            setNotes(
-              notes.map(n => {
-                return n.id === note.id ? result.data.updateNote : n;
-              })
-            );
-          }}
-          onDelete={async () => {
-            const result = await API.graphql(
-              graphqlOperation(deleteNote, {
-                input: {
-                  id: note.id
-                }
-              })
-            );
-
-            setNotes(notes.filter(n => n.id !== note.id));
-          }}
-        />
-      ))}
+     <View style={styles.container}>
+        <Form type={User} /> {/* Notice the addition of the Form component */}
+      </View>
     </Container>
   );
 };

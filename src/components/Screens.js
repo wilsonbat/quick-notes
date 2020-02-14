@@ -108,9 +108,7 @@ export default () => {
           <StyledTabPanel>
             {tabIndex === 0 && <Notes setTabIndex={setTabIndex} />}
           </StyledTabPanel>
-          <StyledTabPanel>
-            {tabIndex === 1 && <Record setTabIndex={setTabIndex} />}
-          </StyledTabPanel>
+          
         </StyledTabPanels>
       </StyledTabs>
     </>
