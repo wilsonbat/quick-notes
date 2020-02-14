@@ -1,4 +1,5 @@
-import React, { useState, useEffeict ,Component, View, StyleSheet} from "react";
+import React, { useState, useEffeict ,Component} from "react";
+import { Text, TextInput, View } from 'react-native';
 import { API, graphqlOperation } from "aws-amplify";
 import styled from "@emotion/styled";
 
@@ -10,16 +11,15 @@ import { updateNote, deleteNote } from "../graphql/mutations";
 
 
 
-import t from 'tcomb-form-native'; // 0.6.9
 
-const Form = t.form.Form;
 
-const User = t.struct({
-  FirstName: t.String,
-  LastName: t.String,
-  BirthDate: t.Date,
-  FavoriteIceCream: t.String
-});
+
+
+
+
+
+
+
 
 const Container = styled("div")`
   max-width: 800px;
@@ -56,8 +56,16 @@ export default () => {
 
   return (
     <Container>
-     <View style={styles.container}>
-        <Form type={User} /> {/* Notice the addition of the Form component */}
+     <View style={{padding: 10}}>
+        <TextInput
+          style={{height: 40}}
+          placeholder="Type here to translate!"
+          onChangeText={(text) => this.setState({text})}
+          value={this.state.text}
+        />
+        <Text style={{padding: 10, fontSize: 42}}>
+          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+        </Text>
       </View>
     </Container>
   );
