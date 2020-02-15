@@ -4,7 +4,7 @@ import { Authenticator } from "aws-amplify-react";
 import styled from "@emotion/styled";
 
 import awsExports from "./aws-exports";
-import Screens from "./components/Screens";
+import LandingScreen from "./components/LandingScreen";
 
 const Title = styled("h1")`
   text-align: center;
@@ -64,7 +64,7 @@ function App() {
   }, []);
 
   return state.isLoggedIn ? (
-    <Screens />
+    <LandingScreen />
   ) : (
     <>
       <Title>Soul Beast</Title>
