@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Keyboard, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'aws-amplify-react-native';
  
-import Button from "./components/";
+import { Button } from "@rebass/emotion";
 
 export default class LandingScreen extends React.Component {
   render() {
