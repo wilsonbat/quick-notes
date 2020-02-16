@@ -12,6 +12,7 @@
     "@rebass/forms": "^4.0.5",
     "aws-amplify": "^1.1.36",
     "aws-amplify-react": "^2.3.12",
+    "aws-amplify-react-native": "^3.2.2",
     "formik": "^1.5.8",
     "microphone-stream": "^5.0.1",
     "normalize.css": "^8.0.1",

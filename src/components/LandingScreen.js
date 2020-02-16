@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Keyboard, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Keyboard, StyleSheet, ScrollView, Text, TextInput, TouchableOpacity, View } from 'aws-amplify-react-native';
  
 import Button from "./components/Button";
 

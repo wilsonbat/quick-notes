@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'aws-amplify-react-native';
 
 const Button = ({ onPress, children }) => {
   const { buttonContainerStyle, buttonStyle, textStyle } = styles;
